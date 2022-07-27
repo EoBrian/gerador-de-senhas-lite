@@ -1,0 +1,80 @@
+/*default settings*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+.clear {clear: both;}
+
+/*classes auxiliares*/
+:root {
+    --bg-color-app: #2be2ba;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    font-size: 1.5em;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #fff;
+    cursor: pointer;
+    width: 100px;
+}
+
+/**/
+#App {
+    height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--bg-color-app);
+}
+
+#App .box {
+    width: 50%;
+}
+
+#App .box .password {
+    width: 100%;
+    padding: 20px;
+    border: 10px solid #ffffff81;
+    border-radius: 20px;
+}
+
+#App .box .password input{
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+}
+
+#App .box .password input[type=text] {
+    width: 80%;
+    float: left;
+}
+
+#App .box .password input[type=number] {
+    width: 18%;
+    float: right;
+}
+
+.buttons {
+    text-align: center;
+    margin: 10px;
+}
+
+/*responsive*/
+@media screen and (max-width:768px) {
+    #App .box {width: 95%;}
+
+    #App .box .password {
+        padding: 5px;
+    }
+}
