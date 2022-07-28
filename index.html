@@ -10,6 +10,19 @@
       <noscript>Você precisa estar com o JavaScript Habilitado</noscript>
 
       <section id="App" class="center">
+        <header id="menu-application">
+          <div class="button-colors">
+
+            <button onclick="ChangeWhite()" class="button"></button>
+            <button onclick="ChangeGray()" class="button" style="background-color: #ccc;"></button>
+
+            <button onclick="ChangeViolet()" class="button" style="background-color: #8a2be2;"></button>
+
+            <button onclick="ChangeDefault()" class="button" style="background-color: #2be2ba;"></button>
+          </div>
+        </header>
+
+
         <section class="box">
           
           <form action="">
@@ -40,7 +53,7 @@
         //input number
         var number = document.getElementById('number-choice')
         // 1 - cria a lista com todos os caracteres
-        var Caracteres = ['abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789-_!@#$%&*']
+        const Caracteres = ['abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789-_!@#$%&*']
 
         const GerarSenhas = () => {
             let pass_list = []
@@ -52,6 +65,14 @@
             }
             password.value = pass_list
         }
+
+        /*Function Change Background-color*/
+        const App = document.getElementById('App')
+        const ChangeWhite = ()=> {App.style.backgroundColor = '#fff'}
+        const ChangeGray = ()=> {App.style.backgroundColor = '#ccc'}
+        const ChangeViolet = ()=> {App.style.backgroundColor = '#8a2be2'}
+        const ChangeDefault = ()=> {App.style.backgroundColor = '#2be2ba'}
+        
       </script>
     </body>
 </html>
